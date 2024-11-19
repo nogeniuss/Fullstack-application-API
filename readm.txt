@@ -1,0 +1,91 @@
+/*Iremos: 
+
+- Entender conceitos de backend e frontend
+- Criar nossa primeira api
+- Conectar com um banco de dados
+- Query params / route params / body params
+- Metodos http
+- Status http
+
+
+professor - rodolfo mori
+
+
+oque iremos fazer - 
+
+1. cadastro de usuarios.
+2. requisitar para ver se o usuario existe.
+3. caso não exista, post para o banco de dados para cadatrar o usuario.
+4. caso exista, informar que o usuario ja esta cadatrado.
+
+
+instalar a extensão thunder client, para nos auxiliar nas respostas http
+banco de dados mongodb
+biblioteca prisma
+
+
+
+*/
+
+
+
+/*------------ http metodos ------------------
+
+get - users = listar;
+post - users = criar;
+put - users = editar varios;
+patch - users = editar um;
+delete - users = deletar;
+
+As rotas precisar ter estes elementos nelas:
+    1) Tipo de rota / metodo http(get...);
+    2) Endereço (www.google....);
+
+podemos ter varias rotas com o mesmo endereço, porem com metodos diferentes
+
+listar usuarios
+(req,res / request , response) = requisição, resposta
+
+na req(request) tem 3 formas de enviar estas informações
+
+1) query params (GET) ex.: google (informações que não são delicadas)
+=> servidor.com/user?estado=bahia&cidade=salvador
+=> servidor.com/series?tipo=comedia&streaming=netflix
+
+2) route params (GET / PUT / DELETE) ex.: youtube
+(informações especificas, sempre uma unica informação)
+=> https://www.youtube.com/watch?v=dQw4w9WgXcQ
+=> https://github.com/facebook/react/blob/main/packages/react/src/React.js
+
+3) body params (POST/PUT) - informações delicadas, ou uma grande quantidade de informação
+=> {
+    "nome":"marllon","cidade":"blumenau", "id": 22
+    }
+*/
+
+//-> iremos substituir esta variavel pelo banco de dados
+//user mongo db = nogeniuss
+//password mondodb = MVS7PE0HDQdc0jh7
+
+
+/*
+objetivo = criar api de usuarios
+1 - criar um usuario - foi
+2 - listar todos os usuarios - foi
+3 - editar um usuario - foi
+4 - deletar um usuario - foi
+
+missão extra - editar varios - so adicionar updateMany na rota
+
+banco de dados = mongodb
+*/
+
+link aula backend - https://www.youtube.com/watch?v=PyrMT0GA3sE
+
+link frontend - https://www.youtube.com/watch?v=_gHr2Pe5LCY
+
+para frntend vamos utilizar
+
+react com vite
+
+para conectar o fontend com backend vamos usar o axios

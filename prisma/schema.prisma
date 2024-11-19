@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  //vai criar o id automatico, considerando ele string
+  id      String   @id @default(auto()) @map("_id") @db.ObjectId
+  //cria a coluna email, com ela sendo unica
+  email   String   @unique
+  //cria a coluna nome
+  name    String
+  //cria a coluna idade, não obrigatoria preencha-la(?)
+  age     String?
+  
+}
+
+// ao final rodar o comando npx prisma db push, para verificar se esta tudo certo
+//instale tambem o prisma client
+//para entrar na tela de tabelas etc. rode o comando npx prisma studio
